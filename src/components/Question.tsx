@@ -14,6 +14,7 @@ const Question = ({ id, sentence, setQuestionAnswer }: Props) => {
       next[id] = index;
       return next;
     });
+    window.scrollBy({ top: 200, behavior: "smooth" });
   };
 
   return (

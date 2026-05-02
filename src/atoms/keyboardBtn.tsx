@@ -18,7 +18,6 @@ const KeyboardBtn = ({ handleClick, id }) => {
             type="radio"
             name={`radio-${id}`}
             className="radio"
-            defaultChecked={index === 0}
             onChange={() => handleClick(id, index)}
           />
           <span className="text-xs inline-block">{opt}</span>

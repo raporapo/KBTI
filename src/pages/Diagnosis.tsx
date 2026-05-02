@@ -10,6 +10,8 @@ const Diagnosis = ({ calculateResult }) => {
     Array(questions.length).fill(-1),
   );
 
+  const isAllAnswered = questionAnswer.every((a) => a !== -1);
+
   const handleSubmit = () => {
     calculateResult(questionAnswer);
     navigate("/Result");
@@ -28,9 +30,15 @@ const Diagnosis = ({ calculateResult }) => {
           />
         );
       })}
+      {!isAllAnswered && (
+        <span className="text-red-500 block mt-10">
+          全ての質問に回答してください
+        </span>
+      )}
       <button
-        className="btn btn-primary mt-6 mb-[300px]"
+        className="btn btn-primary mt-6 mb-[300px] disabled:opacity-40 disabled:cursor-not-allowed"
         onClick={handleSubmit}
+        disabled={!isAllAnswered}
       >
         結果を見る
       </button>

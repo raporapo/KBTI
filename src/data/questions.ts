@@ -29,7 +29,6 @@ export const questions: Question[] = [
       [8, 7, 6, 5, 4, 3, 2, 1],
     ],
   },
-  ,
   {
     id: 3,
     question_sentence: "キーボードを見なければ文字が打てない",
@@ -46,10 +45,10 @@ export const questions: Question[] = [
       [8, 7, 6, 5, 4, 3, 2, 1],
     ],
   },
-  ,
   {
     id: 5,
-    question_sentence: "キーボードを見なければ文字が打てない",
+    question_sentence:
+      "キーボードを見なければ文字が打てないキーボードを見なければ文字が打てないキーボードを見なければ文字が打てないキーボードを見なければ文字が打てない",
     evaluation: [
       [1, 2, 3, 4, 5, 6, 7, 8],
       [8, 7, 6, 5, 4, 3, 2, 1],
