@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import List from "../components/List";
+// import List from "../components/List";
+// import KeycapA_VolDn from "../atoms/keycapSVG";
 
 const Home = () => {
   return (
@@ -9,9 +10,6 @@ const Home = () => {
         <Link to="/Diagnosis" className="btn btn-primary">
           診断スタート
         </Link>
-      </div>
-      <div className="my-10">
-        <List />
       </div>
     </div>
   );

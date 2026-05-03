@@ -19,7 +19,7 @@ const Question = ({ id, sentence, setQuestionAnswer }: Props) => {
 
   return (
     <div className="border-b-1 border-gray-300 py-10 max-w-xl mx-auto">
-      <h3 className="font-bold text-xl">{sentence}</h3>
+      <h3 className="font-bold text-xl line">{sentence}</h3>
       <KeyboardBtn handleClick={handleClick} id={id} />
     </div>
   );

@@ -23,7 +23,7 @@ const HeaderNav = () => {
       </div>
       <div className="flex-1">
         <Link to={"/"} className="text-3xl block mx-auto max-w-fit">
-          KBTI
+          KeyBoardTypeIndicator
         </Link>
       </div>
       <div className="flex-none">

@@ -15,9 +15,7 @@ const List = () => {
         </div>
         <div className="list-col-grow">
           <div>Dio Lupa</div>
-          <div className="text-xs uppercase font-semibold opacity-60">
-            Remaining Reason
-          </div>
+          <div className="text-xs uppercase font-semibold opacity-60">aaaa</div>
         </div>
         <button className="btn btn-square btn-ghost">
           <svg

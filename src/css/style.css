@@ -4,3 +4,7 @@
 body {
   background-color: #fffcf3;
 }
+
+.line {
+  word-break: auto-phrase;
+}
