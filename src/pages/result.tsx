@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
-import { characters, descriptions } from "../data/characters";
+import {
+  characters,
+  descriptions,
+  descriptionLabels,
+} from "../data/characters";
 import Budoux from "../components/Budoux";
 
 const Result = ({ result }) => {
@@ -17,45 +21,23 @@ const Result = ({ result }) => {
 
       {result !== null && (
         <section className="my-6 sm:my-10 max-w-2xl mx-auto text-left">
-          {result[0] === "I" ? (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Integral} />
-            </p>
-          ) : (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Split} />
-            </p>
-          )}
-
-          {result[1] === "N" ? (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Natural} />
-            </p>
-          ) : (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Express} />
-            </p>
-          )}
-
-          {result[2] === "L" ? (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Loud} />
-            </p>
-          ) : (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Ambient} />
-            </p>
-          )}
-
-          {result[3] === "T" ? (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Tethered} />
-            </p>
-          ) : (
-            <p className="my-3 sm:my-4">
-              <Budoux text={descriptions.Free} />
-            </p>
-          )}
+          {(
+            [
+              [result[0] === "I" ? "Integral" : "Split"],
+              [result[1] === "N" ? "Natural" : "Express"],
+              [result[2] === "L" ? "Loud" : "Ambient"],
+              [result[3] === "T" ? "Tethered" : "Free"],
+            ] as const
+          ).map(([key]) => (
+            <div key={key} className="my-6 sm:my-8">
+              <h4 className="font-bold text-lg sm:text-xl mb-2">
+                {descriptionLabels[key]}
+              </h4>
+              <p>
+                <Budoux text={descriptions[key]} />
+              </p>
+            </div>
+          ))}
         </section>
       )}
       <div className="py-6">

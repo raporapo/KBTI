@@ -135,6 +135,20 @@ export const characters: character[] = [
   },
 ];
 
+export const descriptionLabels: description = {
+  Integral: "Integral - 一体型キーボード",
+  Split: "Split - 分離型キーボード",
+
+  Natural: "Natural - フル配列",
+  Express: "Express - コンパクト配列",
+
+  Loud: "Loud - 打鍵音重視",
+  Ambient: "Ambient - 静音志向",
+
+  Tethered: "Tethered - 有線接続",
+  Free: "Free - 無線接続",
+};
+
 export const descriptions: description = {
   Integral:
     "キーが一枚のボードにまとまった、最もスタンダードな形状。設置が簡単で選択肢が豊富、価格帯も幅広く、初めての一台から高級モデルまで揃う。家電量販店で「キーボード」と言えばほぼこれを指すほどの定番で、机の上にポンと置けばすぐ使える手軽さが魅力。多くの人にとっての完成形。",

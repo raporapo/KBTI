@@ -1,73 +1,120 @@
-# React + TypeScript + Vite
+# KBTI — KeyBoard Type Indicator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MBTI の 4 軸 16 タイプのフレームワークをキーボードの使い方に応用した、Web 診断アプリケーション。
 
-Currently, two official plugins are available:
+## 背景・目的
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+リモートワークの普及により、キーボードに向き合う時間は大幅に増加している一方で、多くのユーザーはノート PC 付属のキーボードや店頭で何となく手に取ったキーボードを使い続けており、自分の打鍵スタイルに合った一台を選べていない。
 
-## React Compiler
+KBTI は、ユーザーが 28 問の質問に答えるだけで自分の「キーボードタイプ」を知ることができ、効率性や快適性を高める最適なキーボードへの気づきを提供することを目指す。
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 4 つの診断軸
 
-## Expanding the ESLint configuration
+| 軸     | 指標 A                      | 指標 B                              |
+| ------ | --------------------------- | ----------------------------------- |
+| 第 1 軸 | **I** — Integral(一体型)   | **S** — Split(分離型)              |
+| 第 2 軸 | **N** — Natural(フル配列)  | **E** — Express(コンパクト/ショートカット) |
+| 第 3 軸 | **L** — Loud(打鍵音重視)   | **A** — Ambient(静音志向)          |
+| 第 4 軸 | **T** — Tethered(有線)     | **F** — Free(無線)                  |
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+4 軸の組み合わせにより 16 タイプ(例: `INLT` 王道職人、`SEAF` 究極形態キーボード)が決定される。
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 機能
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### 実装済み
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- トップページ(診断スタート)
+- 28 問のリッカート尺度(5 段階)による質問画面
+- 軸ごとの重みつきポイントによるスコアリングロジック
+- 結果ページでの 4 文字タイプ表示・タイプ名表示
+- 4 軸それぞれの解説文表示
+- レスポンシブ対応(最小 320px、モバイル/タブレット/デスクトップ)
+- BudouX による日本語の文節単位改行
+
+### スコープ外(現状未実装 / 今後検討)
+
+- SNS シェア機能(OGP カード)
+- タイプ別おすすめキーボードの提示・アフィリエイトリンク
+- 拡張機能(マウス機能・ボリューム調整エンコーダなど)のおすすめ度判定
+- 質問順のランダム化
+- ユーザー登録・ログイン機能、管理画面、EC 機能、ネイティブアプリ対応
+
+## 技術スタック
+
+| レイヤー         | 採用技術                         |
+| ---------------- | -------------------------------- |
+| フレームワーク   | React 19 + TypeScript            |
+| ビルドツール     | Vite                             |
+| ルーティング     | React Router DOM v7              |
+| スタイリング     | Tailwind CSS v4 + DaisyUI        |
+| 日本語改行制御   | BudouX                           |
+| デプロイ予定先   | Vercel                           |
+
+バックエンド・データベースは持たず、診断ロジックはすべてフロントエンドで完結する。
+
+## 動作環境
+
+- ブラウザ: Chrome / Safari / Firefox / Edge の最新版
+- デバイス: PC / タブレット / スマートフォン
+- 画面幅: 320px〜のレスポンシブ対応
+
+## セットアップ
+
+```bash
+# 依存パッケージのインストール
+npm install
+
+# 開発サーバ起動 (http://localhost:5173)
+npm run dev
+
+# 型チェック + 本番ビルド
+npm run build
+
+# Lint
+npm run lint
+
+# ビルド成果物のプレビュー
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ディレクトリ構成
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├── App.tsx                  # ルーティング・スコア計算
+├── main.tsx                 # エントリポイント
+├── pages/
+│   ├── Home.tsx             # トップページ (SC-001)
+│   ├── Diagnosis.tsx        # 質問画面 (SC-002)
+│   └── Result.tsx           # 結果画面 (SC-003)
+├── components/
+│   ├── HeaderNav.tsx        # ナビゲーション
+│   ├── Question.tsx         # 質問 1 件分の UI
+│   ├── Description.tsx      # 質問画面の説明
+│   └── Budoux.tsx           # 日本語文節改行ヘルパー
+├── atoms/
+│   ├── keyboardBtn.tsx      # 5 段階リッカート尺度ラジオ
+│   └── keycapSVG.tsx        # キーキャップ風 SVG イラスト
+├── data/
+│   ├── questions.ts         # 28 問の質問マスタ・軸の重み
+│   └── characters.ts        # 16 タイプ定義・軸ごとの説明文
+└── css/
+    └── style.css            # Tailwind / DaisyUI 読み込み
+```
+
+## スコアリング方式
+
+- 各質問は 4 軸それぞれ独立した重みを持つ(複数軸に影響することもある)
+- 5 段階回答に対して以下の係数で重みを乗算し加算
+  - そう思う(5): `+1.0 × 重み`
+  - ややそう思う(4): `+0.7 × 重み`
+  - どちらでもない(3): 1 と 5 の重みの平均値の半分
+  - あまり思わない(2): `-0.7 × 重み`
+  - そう思わない(1): `-1.0 × 重み`
+- 全質問終了後、各軸で対立する 2 指標のスコアを比較し、大きい方を採用
+
+詳細は [`src/data/questions.ts`](src/data/questions.ts) と [`src/App.tsx`](src/App.tsx) を参照。
+
+## 関連資料
+
+- 要件定義書: [`キーボード16タイプ診断_要件定義書.docx`](./キーボード16タイプ診断_要件定義書.docx)
