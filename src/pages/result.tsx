@@ -6,7 +6,13 @@ import {
 } from "../data/characters";
 import Budoux from "../components/Budoux";
 
-const Result = ({ result }) => {
+type ResultType = ["I" | "S", "N" | "E", "L" | "A", "T" | "F"];
+
+type Props = {
+  result: ResultType | null;
+};
+
+const Result = ({ result }: Props) => {
   const KBTI = result ? result.join("") : null; //KBTIのアルファベット表記 | null
   const KBTIname = characters.find((c) => c.name_1 === KBTI)?.name_2; //KBTIの日本語名 | undefined
   return (

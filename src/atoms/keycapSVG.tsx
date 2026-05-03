@@ -1,4 +1,10 @@
-import React from "react";
+type Props = {
+  size?: number;
+  className?: string;
+  strokeColor?: string;
+  topStrokeColor?: string;
+  shadowStrokeColor?: string;
+};
 
 const KeycapA_VolDn_Outline = ({
   size = 200,
@@ -6,7 +12,7 @@ const KeycapA_VolDn_Outline = ({
   strokeColor = "#333",
   topStrokeColor = "#555",
   shadowStrokeColor = "rgba(0,0,0,0.2)",
-}) => {
+}: Props) => {
   // サイズに基づいて、他の比率を計算
   const width = size;
   const height = size * 1.1; // 少し縦長にする

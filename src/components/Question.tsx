@@ -5,12 +5,12 @@ import Budoux from "./Budoux";
 type Props = {
   id: number;
   sentence: string;
-  setQuestionAnswer: React.Dispatch<React.SetStateAction<Number[]>>;
+  setQuestionAnswer: React.Dispatch<React.SetStateAction<number[]>>;
 };
 
 const Question = ({ id, sentence, setQuestionAnswer }: Props) => {
   const handleClick = (id: number, index: number) => {
-    setQuestionAnswer((prev: Number[]) => {
+    setQuestionAnswer((prev: number[]) => {
       const next = [...prev];
       next[id] = index;
       return next;

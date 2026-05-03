@@ -4,9 +4,13 @@ import Question from "../components/Question";
 import { useState } from "react";
 import Description from "../components/Description";
 
-const Diagnosis = ({ calculateResult }) => {
+type Props = {
+  calculateResult: (answers: number[]) => void;
+};
+
+const Diagnosis = ({ calculateResult }: Props) => {
   const navigate = useNavigate();
-  const [questionAnswer, setQuestionAnswer] = useState<Number[]>(
+  const [questionAnswer, setQuestionAnswer] = useState<number[]>(
     Array(questions.length).fill(-1),
   );
 

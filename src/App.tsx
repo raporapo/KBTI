@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Diagnosis from "./pages/Diagnosis";
-import Result from "./pages/result";
+import Result from "./pages/Result";
 import HeaderNav from "./components/HeaderNav";
 import { useState } from "react";
 import { questions } from "./data/questions";

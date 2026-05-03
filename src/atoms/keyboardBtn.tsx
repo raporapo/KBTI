@@ -1,4 +1,9 @@
-const KeyboardBtn = ({ handleClick, id }) => {
+type Props = {
+  handleClick: (id: number, index: number) => void;
+  id: number;
+};
+
+const KeyboardBtn = ({ handleClick, id }: Props) => {
   const option: string[] = [
     "そう思う",
     "ややそう思う",
