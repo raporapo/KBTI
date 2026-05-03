@@ -20,7 +20,7 @@ export const questions: Question[] = [
     question_sentence:
       "アルファベットや数字以外のキーで、使った覚えがないキーがほとんどだ",
     evaluation: [
-      [0, 2, 0, 6, 0, 0, 0, 0],
+      [0, 2, 0, 4, 0, 0, 0, 0],
       [4, 0, 6, 2, 0, 0, 0, 0],
     ],
     advanced: 0,
@@ -30,7 +30,7 @@ export const questions: Question[] = [
     question_sentence:
       "キーボードを選ぶなら、見た目よりも心地よい打鍵音と打鍵感の方が大切だ",
     evaluation: [
-      [1, 0, 0, 1, 5, 1, 0, 0],
+      [1, 0, 0, 1, 6, 1, 0, 0],
       [0, 0, 0, 2, 0, 0, 0, 0],
     ],
     advanced: 0,
@@ -39,8 +39,8 @@ export const questions: Question[] = [
     id: 3,
     question_sentence: "キーボードを見なければ文字が打てない",
     evaluation: [
-      [5, 0, 3, 0, 0, 0, 0, 0],
-      [0, 6, 1, 3, 0, 0, 0, 0],
+      [5, 0, 4, 0, 0, 0, 0, 0],
+      [0, 6, 1, 2, 0, 0, 0, 0],
     ],
     advanced: 0,
   },
@@ -48,8 +48,8 @@ export const questions: Question[] = [
     id: 4,
     question_sentence: "他人のキーボードの打鍵音が耳障りだ",
     evaluation: [
-      [0, 0, 0, 0, 0, 7, 0, 0],
-      [0, 0, 0, 0, 5, 2, 0, 0],
+      [0, 0, 0, 0, 0, 4, 0, 0],
+      [0, 0, 0, 0, 5, 1, 0, 0],
     ],
     advanced: 0,
   },
@@ -57,7 +57,7 @@ export const questions: Question[] = [
     id: 5,
     question_sentence: "人が多いところでよく作業する",
     evaluation: [
-      [0, 0, 0, 2, 0, 3, 6, 0],
+      [0, 0, 0, 2, 0, 3, 4, 0],
       [0, 1, 0, 0, 0, 0, 0, 2],
     ],
     advanced: 0,
@@ -66,7 +66,7 @@ export const questions: Question[] = [
     id: 6,
     question_sentence: "特にキーボードにこだわりはない",
     evaluation: [
-      [4, 0, 5, 0, 0, 1, 2, 0],
+      [4, 0, 6, 0, 0, 0, 2, 0],
       [0, 3, 0, 2, 2, 0, 0, 0],
     ],
     advanced: 0,
@@ -76,7 +76,7 @@ export const questions: Question[] = [
     question_sentence:
       "キーボードが充電切れで使えなくなる可能性を一切考えたくない",
     evaluation: [
-      [0, 0, 0, 0, 0, 0, 6, 0],
+      [0, 0, 0, 0, 0, 0, 4, 0],
       [0, 1, 0, 0, 0, 0, 0, 4],
     ],
     advanced: 0,
@@ -115,7 +115,7 @@ export const questions: Question[] = [
       "小型化のために特殊機能付きのキーが取り除かれるのは、いつかそのキーを使うかもしれないから嫌だ",
     evaluation: [
       [4, 0, 6, 0, 0, 0, 0, 0],
-      [0, 0, 0, 4, 0, 0, 0, 0],
+      [0, 0, 0, 3, 0, 0, 0, 0],
     ],
     advanced: 0,
   },
@@ -123,7 +123,7 @@ export const questions: Question[] = [
     id: 12,
     question_sentence: "キーボードがよく邪魔になって鬱陶しい",
     evaluation: [
-      [0, 5, 0, 6, 0, 0, 0, 2],
+      [0, 5, 0, 5, 0, 0, 0, 2],
       [0, 0, 1, 0, 0, 0, 0, 0],
     ],
     advanced: 0,
@@ -133,7 +133,7 @@ export const questions: Question[] = [
     question_sentence: "キーボードを持ち運んで使いたい",
     evaluation: [
       [0, 3, 0, 4, 0, 0, 0, 6],
-      [0, 0, 0, 0, 0, 0, 3, 0],
+      [0, 0, 0, 0, 0, 0, 2, 0],
     ],
     advanced: 0,
   },
@@ -141,7 +141,7 @@ export const questions: Question[] = [
     id: 14,
     question_sentence: "よくパソコンでゲームをする",
     evaluation: [
-      [0, 2, 5, 2, 0, 0, 5, 0],
+      [0, 2, 5, 2, 0, 0, 4, 0],
       [0, 0, 0, 0, 0, 0, 0, 2],
     ],
     advanced: 0,
@@ -160,7 +160,7 @@ export const questions: Question[] = [
     question_sentence:
       "キーを押した時にカチカチまたはコトコトと鳴る方がかっこいい",
     evaluation: [
-      [2, 0, 0, 3, 6, 0, 0, 0],
+      [2, 0, 0, 2, 6, 0, 0, 0],
       [0, 2, 0, 0, 0, 5, 0, 0],
     ],
     advanced: 0,
@@ -169,7 +169,7 @@ export const questions: Question[] = [
     id: 17,
     question_sentence: "同じショートカットを、数え切れないくらい使う",
     evaluation: [
-      [2, 0, 0, 3, 0, 0, 0, 0],
+      [2, 0, 0, 2, 0, 0, 0, 0],
       [0, 0, 0, 0, 0, 0, 0, 0],
     ],
     advanced: 1,
@@ -187,7 +187,7 @@ export const questions: Question[] = [
     id: 19,
     question_sentence: "ノートパソコンのキーボードは打ちづらい",
     evaluation: [
-      [0, 4, 0, 4, 0, 0, 0, 1],
+      [0, 4, 0, 3, 0, 0, 0, 1],
       [4, 0, 2, 0, 0, 0, 0, 0],
     ],
     advanced: 0,
@@ -197,8 +197,8 @@ export const questions: Question[] = [
     question_sentence:
       "機能性が多少落ちたとしても、薄くて小型なキーボードを目指す",
     evaluation: [
-      [0, 3, 0, 6, 0, 0, 0, 3],
-      [3, 0, 4, 0, 0, 0, 2, 0],
+      [0, 3, 0, 5, 0, 0, 0, 3],
+      [3, 0, 5, 0, 0, 0, 4, 0],
     ],
     advanced: 0,
   },
@@ -215,7 +215,7 @@ export const questions: Question[] = [
     id: 22,
     question_sentence: "キーボード入力の遅延の無さや安定性が求められる",
     evaluation: [
-      [0, 0, 0, 0, 0, 0, 6, 0],
+      [0, 0, 0, 0, 0, 0, 5, 0],
       [0, 0, 0, 0, 0, 0, 0, 3],
     ],
     advanced: 0,
@@ -251,7 +251,7 @@ export const questions: Question[] = [
     id: 26,
     question_sentence: "テンキーはいらない",
     evaluation: [
-      [0, 0, 0, 6, 0, 0, 0, 0],
+      [0, 0, 0, 5, 0, 0, 0, 0],
       [6, 0, 6, 0, 0, 0, 0, 0],
     ],
     advanced: 0,
@@ -266,3 +266,13 @@ export const questions: Question[] = [
     advanced: 4,
   },
 ];
+
+// const sum: number[] = Array(8).fill(0);
+// questions.forEach((question) => {
+//   question.evaluation.forEach((points) => {
+//     points.forEach((point, index) => {
+//       sum[index] += point;
+//     });
+//   });
+// });
+// console.log(sum);

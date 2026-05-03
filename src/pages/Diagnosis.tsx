@@ -18,7 +18,7 @@ const Diagnosis = ({ calculateResult }) => {
   };
 
   return (
-    <div className="text-center px-4">
+    <div className="text-center px-4 sm:px-6 md:px-8">
       <Description />
       {questions.map((question) => {
         return (
@@ -31,12 +31,12 @@ const Diagnosis = ({ calculateResult }) => {
         );
       })}
       {!isAllAnswered && (
-        <span className="text-red-500 block mt-10">
+        <span className="text-red-500 block mt-6 sm:mt-10">
           全ての質問に回答してください
         </span>
       )}
       <button
-        className="btn btn-primary mt-6 mb-[300px] disabled:opacity-40 disabled:cursor-not-allowed"
+        className="btn btn-primary mt-6 mb-32 sm:mb-48 md:mb-[300px] disabled:opacity-40 disabled:cursor-not-allowed"
         onClick={handleSubmit}
         disabled={!isAllAnswered}
       >

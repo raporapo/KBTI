@@ -22,8 +22,11 @@ const HeaderNav = () => {
         </button>
       </div>
       <div className="flex-1">
-        <Link to={"/"} className="text-3xl block mx-auto max-w-fit">
-          KeyBoardTypeIndicator
+        <Link
+          to={"/"}
+          className="text-lg sm:text-2xl md:text-3xl block mx-auto max-w-fit whitespace-nowrap"
+        >
+          KeyBoard Type Indicator
         </Link>
       </div>
       <div className="flex-none">
